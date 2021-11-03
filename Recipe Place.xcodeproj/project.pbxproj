@@ -14,6 +14,7 @@
 		FA403DB72732DBC7004E1F75 /* Recipe_Place.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA403DB52732DBC7004E1F75 /* Recipe_Place.xcdatamodeld */; };
 		FA403DB92732DBC8004E1F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA403DB82732DBC8004E1F75 /* Assets.xcassets */; };
 		FA403DBC2732DBC8004E1F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA403DBA2732DBC8004E1F75 /* LaunchScreen.storyboard */; };
+		FA403DC42732F1D0004E1F75 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA403DC32732F1D0004E1F75 /* InstructionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FA403DB82732DBC8004E1F75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA403DBB2732DBC8004E1F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA403DBD2732DBC8004E1F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA403DC32732F1D0004E1F75 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				FA403DBA2732DBC8004E1F75 /* LaunchScreen.storyboard */,
 				FA403DBD2732DBC8004E1F75 /* Info.plist */,
 				FA403DB52732DBC7004E1F75 /* Recipe_Place.xcdatamodeld */,
+				FA403DC32732F1D0004E1F75 /* InstructionsViewController.swift */,
 			);
 			path = "Recipe Place";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				FA403DB72732DBC7004E1F75 /* Recipe_Place.xcdatamodeld in Sources */,
 				FA403DAD2732DBC7004E1F75 /* AppDelegate.swift in Sources */,
 				FA403DAF2732DBC7004E1F75 /* SceneDelegate.swift in Sources */,
+				FA403DC42732F1D0004E1F75 /* InstructionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
