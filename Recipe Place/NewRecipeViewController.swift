@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InstructionsViewController: UIViewController{
+class NewRecipeViewController: UIViewController{
     
     @IBAction func saveRecipe(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
