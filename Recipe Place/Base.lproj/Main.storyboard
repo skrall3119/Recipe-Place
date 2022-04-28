@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pcm-co-ik9">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -14,41 +14,41 @@
             <objects>
                 <navigationController title="Recipes" id="pcm-co-ik9" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NFQ-p7-96H">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="9wx-Kt-3k9" kind="relationship" relationship="rootViewController" id="JfA-6q-VuF"/>
+                        <segue destination="9wx-Kt-3k9" kind="relationship" relationship="rootViewController" id="oSz-CB-Kqr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Vu-qr-eyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1463" y="12"/>
+            <point key="canvasLocation" x="-1615" y="10"/>
         </scene>
         <!--Recipe List-->
         <scene sceneID="xaQ-3i-uGz">
             <objects>
-                <viewController title="Recipe List" id="9wx-Kt-3k9" customClass="ViewController" customModule="Recipe_Place" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listVc" title="Recipe List" id="9wx-Kt-3k9" customClass="ViewController" customModule="Recipe_Place" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C0Q-nx-hPf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ryl-hp-u9O">
-                                <rect key="frame" x="20" y="88" width="374" height="44"/>
+                                <rect key="frame" x="16" y="44" width="343" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="jgY-kx-jjH"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WCg-xg-yNO">
-                                <rect key="frame" x="20" y="132" width="374" height="730"/>
+                                <rect key="frame" x="16" y="88" width="343" height="579"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellid" id="0oJ-xu-3vk">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="343" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0oJ-xu-3vk" id="Qek-nW-SSs">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -71,15 +71,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recipe List" id="62b-JN-VTU">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="7kk-u5-bNj">
+                            <connections>
+                                <action selector="logOut:" destination="9wx-Kt-3k9" id="CdQ-7a-FAT"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="e0a-g8-ziz">
                             <connections>
                                 <segue destination="Vts-ra-6yz" kind="show" id="8Ly-j8-3oO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="WCg-xg-yNO" id="CZO-Le-mMV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSd-gt-EF3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,17 +92,17 @@
             <objects>
                 <viewController id="XNA-ed-klm" customClass="RecipeViewController" customModule="Recipe_Place" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cja-nw-UTY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GzV-XS-RiP">
-                                <rect key="frame" x="0.0" y="137" width="414" height="759"/>
+                                <rect key="frame" x="0.0" y="93" width="375" height="608"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCY-Bp-4of">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1146"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-4p-Oem">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="0.0" width="335" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="4N8-qb-dzk"/>
                                                 </constraints>
@@ -109,7 +111,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62u-dy-eJL">
-                                                <rect key="frame" x="20" y="79" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="79" width="335" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="dn2-9c-w6k"/>
                                                 </constraints>
@@ -118,7 +120,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ad9-3f-zAa">
-                                                <rect key="frame" x="20" y="341" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="341" width="335" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="mvg-hH-ftr"/>
                                                 </constraints>
@@ -127,7 +129,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAc-4C-H3k">
-                                                <rect key="frame" x="14" y="128" width="386" height="179"/>
+                                                <rect key="frame" x="14" y="128" width="347" height="179"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="179" id="CKr-H5-kkr"/>
@@ -138,7 +140,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t0f-eb-LMh">
-                                                <rect key="frame" x="20" y="390" width="386" height="316"/>
+                                                <rect key="frame" x="20" y="390" width="347" height="316"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="316" id="TdW-nL-Bee"/>
@@ -205,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4B4-ih-0cU">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1078"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1156"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hek-Zw-BPq">
                                         <rect key="frame" x="-1" y="0.0" width="416" height="1295"/>

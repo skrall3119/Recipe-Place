@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>589632096730-v09o5l45ergnptpe71a1acn3dt5koujs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.589632096730-v09o5l45ergnptpe71a1acn3dt5koujs</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCgkXCTjABJy37UKXIBZ9KCNG7_43WDXKU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>589632096730</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jancialex.Recipe-Book</string>
+	<key>PROJECT_ID</key>
+	<string>recipebook-831ed</string>
+	<key>STORAGE_BUCKET</key>
+	<string>recipebook-831ed.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:589632096730:ios:b4d14b3276f2ee9f12d8e3</string>
+</dict>
+</plist>
