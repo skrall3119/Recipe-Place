@@ -13,6 +13,10 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let alert = UIAlertController(title: "Current User", message: "Current User: \(Auth.auth().currentUser?.email)", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
     
     @IBAction func logOut(_ sender: Any) {

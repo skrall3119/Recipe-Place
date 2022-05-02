@@ -42,22 +42,31 @@ class SignUpViewController: UIViewController {
         if error != nil {
             showError(error!)
         } else {
+            
+            let email = EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
             Auth.auth().createUser(withEmail: EmailTextField.text!, password: passwordTextField.text!) { result, err in
                 if err != nil {
                     self.showError("error creating user")
                 } else {
-                    
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["email": email, "password":password, "uid": result!.user.uid]) { (error) in
+                        if error != nil {
+                            self.showError("User data couldn't be saved to the database.")
+                        }
+                    }
+                    let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                    if let initialViewController = storyboard.instantiateInitialViewController() {
+                        self.view.window?.rootViewController = initialViewController
+                        self.view.window?.makeKeyAndVisible()
+                    }
                 }
                 
             }
         }
         
-            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-            if let initialViewController = storyboard.instantiateInitialViewController() {
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
-            }
-        }
+    }
     
     func showError(_ message: String) {
         errorLabel.text = message
